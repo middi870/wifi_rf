@@ -20,6 +20,32 @@ The core signal processing engine is written in **Rust**, while **Python is used
 
 ---
 
+---
+
+# 3️⃣ Add an Architecture Image
+
+Instead of ASCII only, add a simple PNG diagram.
+
+Example:
+
+```markdown
+## System Architecture
+
+![Architecture](docs/architecture_wifi.png)
+
+---
+## Project Status
+
+Current capabilities:
+
+- RSSI signal acquisition
+- RF motion feature extraction
+- Rust signal processing engine
+- FFT-based analysis
+- experimental visualization tools
+
+Project is currently in **active research / development stage**.
+---
 # Example Output
 
 Example terminal output from the RF sensing engine:
