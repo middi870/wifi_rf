@@ -40,7 +40,7 @@ By applying signal processing techniques, these disturbances can be detected and
 
 The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
 
-'''markdown
+
 ## Project Status
 
 Current capabilities:
@@ -52,7 +52,7 @@ Current capabilities:
 - experimental visualization tools
 
 Project is currently in **active research / development stage**.
-'''
+
 # Example Output
 
 Example terminal output from the RF sensing engine:
