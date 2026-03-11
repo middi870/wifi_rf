@@ -5,20 +5,7 @@
 ![RF Sensing](https://img.shields.io/badge/Domain-RF%20Sensing-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-````markdown
-# WiFi RF Motion Sensing (Rust + Python)
 
-> Detecting human movement using only WiFi signal fluctuations.
-
-This project explores **RF sensing using commodity WiFi hardware**.  
-Instead of cameras or external sensors, the system analyzes small fluctuations in **WiFi RSSI (Received Signal Strength Indicator)** caused by human movement.
-
-When a person moves in a room, their body affects the **multipath propagation** of the WiFi signal.  
-By applying signal processing techniques, these disturbances can be detected and analyzed.
-
-The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
-
----
 ## Video Demonstration
 
 ▶️ [Watch the Demo Video](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
@@ -32,7 +19,21 @@ The core signal processing engine is written in **Rust**, while **Python is used
 ![ScreenShots](docs/4.png)
 ![ScreenShots](docs/5.png)
 
----
+
+````markdown
+# WiFi RF Motion Sensing (Rust + Python)
+
+> Detecting human movement using only WiFi signal fluctuations.
+
+This project explores **RF sensing using commodity WiFi hardware**.  
+Instead of cameras or external sensors, the system analyzes small fluctuations in **WiFi RSSI (Received Signal Strength Indicator)** caused by human movement.
+
+When a person moves in a room, their body affects the **multipath propagation** of the WiFi signal.  
+By applying signal processing techniques, these disturbances can be detected and analyzed.
+
+The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
+
+'''markdown
 ## Project Status
 
 Current capabilities:
@@ -44,7 +45,7 @@ Current capabilities:
 - experimental visualization tools
 
 Project is currently in **active research / development stage**.
-
+'''
 # Example Output
 
 Example terminal output from the RF sensing engine:
