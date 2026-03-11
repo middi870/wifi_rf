@@ -19,7 +19,7 @@ By applying signal processing techniques, these disturbances can be detected and
 The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
 
 ---
-
+![Video link](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
 ---
 
 # 3️⃣ Add an Architecture Image
@@ -32,6 +32,11 @@ Example:
 ## System Architecture
 
 ![Architecture](docs/architecture_wifi.png)
+![ScreenShots](docs/1.png)
+![ScreenShots](docs/2.png)
+![ScreenShots](docs/3.png)
+![ScreenShots](docs/4.png)
+![ScreenShots](docs/5.png)
 
 ---
 ## Project Status
