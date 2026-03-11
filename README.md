@@ -5,16 +5,17 @@
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 
-## Video Demonstration
 ---
+## Video Demonstration
+
 ▶️ [Watch the Demo Video](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
 
 ## System Architecture
----
+
 ![Architecture](docs/architecture_wifi.png)
 
 ## Screenshots
----
+
 <p align="center">
   <b>Motion Monitor</b><br>
   <img src="docs/1.png" width="300">
