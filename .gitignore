@@ -1,0 +1,82 @@
+# ----------------------
+# Rust
+# ----------------------
+/target/
+**/target/
+Cargo.lock
+
+# Keep Cargo.lock for applications, ignore for libraries if desired
+#! Cargo.lock
+
+# ----------------------
+# Python
+# ----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.python-version
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Python tooling
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+
+# ----------------------
+# Jupyter
+# ----------------------
+.ipynb_checkpoints
+
+# ----------------------
+# Logs
+# ----------------------
+*.log
+
+# ----------------------
+# IDE / Editor
+# ----------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----------------------
+# OS files
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# Environment variables
+# ----------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------
+# Misc
+# ----------------------
+*.tmp
+*.bak
