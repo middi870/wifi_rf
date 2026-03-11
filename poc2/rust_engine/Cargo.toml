@@ -1,0 +1,15 @@
+[package]
+name = "rust_engine"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "rf_engine"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.28", features = ["extension-module"] }
+regex = "1"
+rustfft = "6"
+rayon = "1.8"
+crossbeam = "0.8"
