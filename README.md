@@ -36,9 +36,9 @@ The goal of this repository is to explore how **commodity WiFi hardware can be u
 ## Screenshots
 
 <p align="center">
-  <b>Test Core</b><br>
+  <b>Test Core & RSSI Reader</b><br>
   <img src="docs/poc1_test_core.png" width="300">
-  <b>RSSI Reader</b><br>
+  
   <img src="docs/poc1_rssi_reader.png" width="300">
 </p>
 
