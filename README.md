@@ -84,7 +84,7 @@ This project builds a **signal processing pipeline** to analyze those changes.
 
 ---
 
-## System Architecture
+## Processing Pipeline
 
 The RF sensing pipeline is built as a modular processing engine.
 
@@ -159,7 +159,7 @@ Rust handles **performance-critical signal processing**, while Python provides t
 
 ## Proof of Concept (POC)
 
-## POC1
+### POC1
 
 Initial prototype exploring **RSSI signal processing**.
 
@@ -178,7 +178,7 @@ Python handles most of the experimentation in this stage.
 
 ---
 
-## POC2
+### POC2
 
 Second prototype focusing on **performance and architecture improvements**.
 
@@ -200,7 +200,7 @@ RSSI → Rust Engine → Filters → FFT → Feature Extraction → Python
 
 ## Installation
 
-## 1. Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/wifi_rf.git
@@ -209,7 +209,7 @@ cd wifi_rf
 
 ---
 
-## 2. Create Python Environment
+### 2. Create Python Environment
 
 ```bash
 python -m venv venv
@@ -218,7 +218,7 @@ source venv/bin/activate
 
 ---
 
-## 3. Install Python Dependencies
+### 3. Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -226,7 +226,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Install Rust
+### 4. Install Rust
 
 Ensure Rust is installed:
 
@@ -284,6 +284,16 @@ No external sensors are required.
 
 ---
 
+## Technologies Used
+
+- Rust (signal processing engine)
+- Python (visualization / experimentation)
+- FFT spectral analysis
+- Kalman filtering
+- WiFi RSSI sensing
+
+---
+
 ## Learning Process
 
 This project was built as an exploration of **RF sensing and signal processing**.
@@ -333,6 +343,7 @@ This project is an experimental exploration of **RF sensing using commodity WiFi
 RSSI-based sensing has limitations and may be noisy depending on hardware and environment.
 
 ---
+
 
 ## License
 
