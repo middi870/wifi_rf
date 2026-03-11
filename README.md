@@ -1,5 +1,10 @@
 # README.md
 
+![Rust](https://img.shields.io/badge/Rust-System%20Engine-orange)
+![Python](https://img.shields.io/badge/Python-Visualization-blue)
+![RF Sensing](https://img.shields.io/badge/Domain-RF%20Sensing-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 ````markdown
 # WiFi RF Motion Sensing (Rust + Python)
 
@@ -312,12 +317,3 @@ plotly
 ````
 
 ---
-
-✅ This version improves:
-
-* readability
-* professionalism
-* structure
-* GitHub discoverability
-* portfolio value
-
