@@ -1,18 +1,30 @@
-# WIFI_RF
+
 ![Rust](https://img.shields.io/badge/Rust-System%20Engine-orange)
 ![Python](https://img.shields.io/badge/Python-Visualization-blue)
 ![RF Sensing](https://img.shields.io/badge/Domain-RF%20Sensing-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+# WiFi RF Motion Sensing (Rust + Python)
 
+> Detecting human movement using only WiFi signal fluctuations.
 
+This project explores **RF sensing using commodity WiFi hardware**.  
+Instead of cameras or external sensors, the system analyzes small fluctuations in **WiFi RSSI (Received Signal Strength Indicator)** caused by human movement.
+
+When a person moves in a room, their body affects the **multipath propagation** of the WiFi signal.  
+By applying signal processing techniques, these disturbances can be detected and analyzed.
+
+The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
+
+---
 ## Video Demonstration
 
 ▶️ [Watch the Demo Video](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
 
 ## System Architecture
-
-![Architecture](docs/architecture_wifi.png)
+<p align="center">
+  <img src="docs/architecture_wifi.png" width="700">
+</p>
 
 ## Screenshots
 
@@ -27,18 +39,9 @@
   <img src="docs/4.png" width="300">
 </p>
 
+
+
 ---
-# WiFi RF Motion Sensing (Rust + Python)
-
-> Detecting human movement using only WiFi signal fluctuations.
-
-This project explores **RF sensing using commodity WiFi hardware**.  
-Instead of cameras or external sensors, the system analyzes small fluctuations in **WiFi RSSI (Received Signal Strength Indicator)** caused by human movement.
-
-When a person moves in a room, their body affects the **multipath propagation** of the WiFi signal.  
-By applying signal processing techniques, these disturbances can be detected and analyzed.
-
-The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
 
 
 ## Project Status
