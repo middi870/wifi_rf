@@ -36,17 +36,29 @@ The goal of this repository is to explore how **commodity WiFi hardware can be u
 ## Screenshots
 
 <p align="center">
-  <b>Motion Monitor</b><br>
-  <img src="docs/1.png" width="300">
-  <img src="docs/2.png" width="300">
+  <b>Test Core</b><br>
+  <img src="docs/poc1_test_core.png" width="300">
+  <b>RSSI Reader</b><br>
+  <img src="docs/poc1_rssi_reader.png" width="300">
 </p>
 
 <p align="center">
-  <img src="docs/3.png" width="300">
-  <img src="docs/4.png" width="300">
+<b>Radar Monitors</b><br>
+  <img src="docs/poc1_radar_monitor1.png" width="300">
+  <img src="docs/poc1_radar_monitor2.png" width="300">
 </p>
 
 
+<p align="center">
+<b>Motion Monitors</b><br>
+  <img src="docs/poc1_motion_monitor1.png" width="300">
+  <img src="docs/poc1_motion_monitor2.png" width="300">
+</p>
+
+<p align="center">
+<b>Breathing Monitors</b><br>
+  <img src="docs/poc1_breathing_monitor.png" width="300">
+</p>
 
 ---
 

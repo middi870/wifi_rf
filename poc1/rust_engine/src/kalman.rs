@@ -8,7 +8,7 @@ pub fn kalman(signal: Vec<f64>, q: f64, r: f64) -> Vec<f64> {
     let mut result = Vec::with_capacity(signal.len());
     result.push(x);
 
-    for &z in signal[1..] {
+    for &z in &signal[1..] {
         p += q;
 
         let k = p / (p + r);
