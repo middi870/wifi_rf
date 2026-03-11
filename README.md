@@ -335,16 +335,12 @@ RSSI-based sensing has limitations and may be noisy depending on hardware and en
 
 MIT License
 
-````
----
+```
 # requirements.txt
 
-```txt
 numpy
 scipy
 matplotlib
 maturin
 plotly
 ```
----
-````
