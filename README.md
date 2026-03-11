@@ -13,11 +13,19 @@
 ## System Architecture
 
 ![Architecture](docs/architecture_wifi.png)
-![ScreenShots](docs/1.png)
-![ScreenShots](docs/2.png)
-![ScreenShots](docs/3.png)
-![ScreenShots](docs/4.png)
-![ScreenShots](docs/5.png)
+
+## Screenshots
+
+<p align="center">
+  <b>Motion Monitor</b><br>
+  <img src="docs/1.png" width="300">
+</p>
+
+<p align="center">
+  <img src="docs/2.png" width="300">
+  <img src="docs/3.png" width="300">
+</p>
+
 
 
 ````markdown
