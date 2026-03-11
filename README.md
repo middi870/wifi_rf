@@ -1,26 +1,40 @@
 # README.md
 
-```markdown
+````markdown
 # WiFi RF Motion Sensing (Rust + Python)
 
-This project explores **RF sensing using WiFi signals**.  
-The goal is to detect human movement by analyzing small fluctuations in **WiFi RSSI (Received Signal Strength Indicator)**.
+> Detecting human movement using only WiFi signal fluctuations.
 
-When a person moves inside a room, their body affects the RF propagation paths of the WiFi signal.  
-By applying **signal processing techniques**, those disturbances can be detected and analyzed.
+This project explores **RF sensing using commodity WiFi hardware**.  
+Instead of cameras or external sensors, the system analyzes small fluctuations in **WiFi RSSI (Received Signal Strength Indicator)** caused by human movement.
 
-This repository contains multiple **Proof of Concept (POC)** implementations that experiment with different architectures and signal pipelines.
+When a person moves in a room, their body affects the **multipath propagation** of the WiFi signal.  
+By applying signal processing techniques, these disturbances can be detected and analyzed.
+
+The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
 
 ---
 
-## Key Idea
+# Example Output
+
+Example terminal output from the RF sensing engine:
+
+```text
+motion 295.131 energy 89260.079 variance 87102.191
+motion 303.738 energy 94028.485 variance 92256.992
+motion 308.743 energy 97143.875 variance 95322.322
+````
+
+Higher motion values correspond to **larger disturbances in the WiFi signal**, typically caused by movement near the transmitter or receiver.
+
+---
+
+# Key Idea
 
 WiFi signals interact with the environment through **multipath propagation**.
 
 ```
-
 Router → Walls → Objects → Human Body → Laptop WiFi Card
-
 ```
 
 Movement changes the RF path, which creates measurable fluctuations in RSSI.
@@ -29,38 +43,40 @@ This project builds a **signal processing pipeline** to analyze those changes.
 
 ---
 
-## Architecture
+# System Architecture
+
+The RF sensing pipeline is built as a modular processing engine.
 
 ```
-
-WiFi RSSI
-↓
-Rust Acquisition Engine
-↓
-Ring Buffer
-↓
-Butterworth Filter
-↓
-Kalman State Estimator
-↓
-EWMA Smoothing
-↓
-FFT Spectral Analysis
-↓
-Feature Extraction
-↓
-Python Interface / Visualization
-
+WiFi Router
+     │
+     ▼
+Laptop WiFi Card (RSSI)
+     │
+     ▼
+Rust RF Engine
+ ├─ RSSI Acquisition
+ ├─ Ring Buffer
+ ├─ Butterworth Filter
+ ├─ Kalman Filter
+ ├─ EWMA Smoothing
+ ├─ FFT Spectral Analysis
+ └─ Feature Extraction
+     │
+     ▼
+Python Interface
+ ├─ Motion Monitor
+ ├─ Radar Visualization
+ └─ Experimental Scripts
 ```
 
-Rust handles the **performance-critical signal processing**, while Python is used for **experimentation and visualization**.
+Rust handles **performance-critical signal processing**, while Python provides the **interactive interface and visualization tools**.
 
 ---
 
 # Repository Structure
 
 ```
-
 .
 ├── poc1
 │   ├── python_int
@@ -96,28 +112,28 @@ Rust handles the **performance-critical signal processing**, while Python is use
 │
 ├── README.md
 └── requirements.txt
-
 ```
 
 ---
 
-# POC Overview
+# Proof of Concept (POC)
 
 ## POC1
 
 Initial prototype exploring **RSSI signal processing**.
 
 Features:
-- RSSI acquisition from WiFi interface
-- Butterworth filtering
-- Kalman filtering
-- EWMA smoothing
-- FFT analysis
-- motion detection experiments
-- breathing detection experiments
-- radar-style visualization
 
-Python handles most of the experimentation.
+* RSSI acquisition from WiFi interface
+* Butterworth filtering
+* Kalman filtering
+* EWMA smoothing
+* FFT analysis
+* motion detection experiments
+* breathing detection experiments
+* radar-style visualization
+
+Python handles most of the experimentation in this stage.
 
 ---
 
@@ -125,20 +141,19 @@ Python handles most of the experimentation.
 
 Second prototype focusing on **performance and architecture improvements**.
 
-Major changes:
-- Rust-based **real-time RF engine**
-- ring buffer for signal history
-- structured feature extraction
-- improved modular architecture
-- Python only used for **interface and visualization**
+Major improvements:
 
-Pipeline:
+* Rust-based **real-time RF engine**
+* ring buffer for signal history
+* structured feature extraction
+* improved modular architecture
+* Python used only for interface and visualization
+
+Processing pipeline:
 
 ```
-
 RSSI → Rust Engine → Filters → FFT → Feature Extraction → Python
-
-````
+```
 
 ---
 
@@ -149,7 +164,7 @@ RSSI → Rust Engine → Filters → FFT → Feature Extraction → Python
 ```bash
 git clone https://github.com/yourusername/wifi_rf.git
 cd wifi_rf
-````
+```
 
 ---
 
@@ -172,14 +187,14 @@ pip install -r requirements.txt
 
 ## 4. Install Rust
 
-Make sure Rust is installed:
+Ensure Rust is installed:
 
 ```bash
 rustc --version
 cargo --version
 ```
 
-If not installed:
+If Rust is not installed:
 
 ```
 https://rustup.rs
@@ -189,9 +204,9 @@ https://rustup.rs
 
 # Build Rust Engine
 
-Inside a POC directory:
+Inside the POC directory:
 
-```
+```bash
 cd poc2/rust_engine
 maturin develop --release
 ```
@@ -202,16 +217,17 @@ This compiles the Rust engine and exposes it as a Python module.
 
 # Run Example
 
-```
+```bash
 cd poc2/python_int
 python run_engine.py
 ```
 
 Example output:
 
-```
-motion 295.131 energy 89260.079 variance 87102.191
-motion 303.738 energy 94028.485 variance 92256.992
+```text
+motion 297.711 energy 90831.760 variance 88631.632
+motion 308.491 energy 96812.534 variance 95166.833
+motion 332.601 energy 114080.124 variance 110623.390
 ```
 
 Values change depending on movement near the WiFi source.
@@ -223,43 +239,56 @@ Values change depending on movement near the WiFi source.
 * Laptop WiFi adapter (Realtek RTL8723DE)
 * Phone hotspot used as WiFi access point
 
-No additional sensors are required.
+No external sensors are required.
+
+---
+
+# Learning Process
+
+This project was built as an exploration of **RF sensing and signal processing**.
+
+During development, AI tools such as **ChatGPT** were used as a coding assistant to explore implementations and understand signal processing techniques.
+
+The focus of the project was understanding:
+
+* RF signal behavior
+* signal processing pipelines
+* Rust systems programming
+* real-time feature extraction
 
 ---
 
 # Future Work
 
-Planned improvements:
+Possible improvements include:
 
 * real-time RF dashboard
-* motion classification
-* WiFi radar heatmaps
+* activity classification
 * gesture detection
-* multi-person disturbance detection
-* netlink-based RSSI acquisition (instead of spawning `iw` processes)
+* WiFi radar heatmaps
+* multi-person motion estimation
+* netlink-based RSSI acquisition instead of spawning `iw` processes
 
 ---
 
-# Why Rust?
+# Why This Project Matters
 
-Rust is used for the core engine because it provides:
+WiFi signals already exist everywhere.
+If we can analyze them properly, they can act as **passive sensors for the environment**.
 
-* high performance
-* memory safety
-* efficient concurrency
-* predictable latency for signal processing
+This concept is used in research areas such as:
 
-Python remains ideal for:
-
-* experimentation
-* visualization
-* rapid prototyping
+* RF sensing
+* device-free localization
+* indoor activity detection
+* wireless radar systems
 
 ---
 
 # Disclaimer
 
 This project is an experimental exploration of **RF sensing using commodity WiFi hardware**.
+
 RSSI-based sensing has limitations and may be noisy depending on hardware and environment.
 
 ---
@@ -279,24 +308,16 @@ numpy
 scipy
 matplotlib
 maturin
+plotly
 ````
 
-Optional (for nicer plots later):
-
-```txt
-plotly
-```
-
 ---
 
-# Optional (Very Good Idea)
+✅ This version improves:
 
-Add a **project banner image** at the top of README later like:
+* readability
+* professionalism
+* structure
+* GitHub discoverability
+* portfolio value
 
-```
-WiFi RSSI → Rust RF Engine → Motion Detection
-```
-
-This makes the repo look **much more professional**.
-
----

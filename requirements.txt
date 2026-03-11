@@ -1,1 +1,7 @@
-matplot
+numpy
+scipy
+matplotlib
+maturin
+
+#Optional (for nicer plots later):
+#plotly
