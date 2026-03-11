@@ -1,7 +1,7 @@
 use pyo3::prelude::*;
 
 #[pyfunction]
-pub fn butterworth_filter(signal: Vec<f64>, alpha: f64) -> Vec<f64> {
+pub fn butterworth(signal: Vec<f64>, alpha: f64) -> Vec<f64> {
     let mut output = Vec::with_capacity(signal.len());
     let mut prev = signal[0];
 

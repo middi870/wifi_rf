@@ -1,14 +1,18 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+mod filters;
+mod fft;
+mod kalman;
+mod butterworth;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+use pyo3::prelude::*;
+use pyo3::types::PyModule;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[pymodule]
+fn wifi_core(_py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(filters::ewma, m)?)?;
+    m.add_function(wrap_pyfunction!(fft::fft_power, m)?)?;
+
+    m.add_function(wrap_pyfunction!(kalman::kalman, m)?)?;
+    m.add_function(wrap_pyfunction!(butterworth::butterworth, m)?)?;
+
+    Ok(())
 }
