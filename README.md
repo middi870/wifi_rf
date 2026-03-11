@@ -17,6 +17,13 @@ By applying signal processing techniques, these disturbances can be detected and
 The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
 
 ---
+
+## Project Goal
+
+The goal of this repository is to explore how **commodity WiFi hardware can be used as a passive sensing system** through signal processing techniques implemented in Rust.
+
+---
+
 ## Video Demonstration
 
 ▶️ [Watch the Demo Video](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
@@ -294,6 +301,37 @@ No external sensors are required.
 
 ---
 
+## Limitations
+
+RSSI-based sensing has several limitations:
+
+- RSSI is relatively coarse compared to CSI-based sensing
+- Environmental noise can affect measurements
+- Furniture and walls introduce multipath complexity
+- Detection accuracy depends on WiFi hardware and driver support
+
+Despite these limitations, RSSI can still reveal **useful motion patterns in controlled environments**.
+
+---
+
+## System Characteristics
+
+Current sensing characteristics of the prototype:
+
+- Uses WiFi RSSI as the sensing signal
+- Works with standard commodity WiFi hardware
+- No additional sensors required
+- Real-time signal processing pipeline implemented in Rust
+- Python used for monitoring and experimentation
+
+Typical signal indicators used for detection:
+
+- motion energy
+- signal variance
+- spectral energy from FFT analysis
+
+---
+
 ## Learning Process
 
 This project was built as an exploration of **RF sensing and signal processing**.
@@ -306,6 +344,24 @@ The focus of the project was understanding:
 * signal processing pipelines
 * Rust systems programming
 * real-time feature extraction
+
+---
+
+## Related Work
+
+RF sensing using WiFi signals has been explored in several research areas:
+
+- Device-free localization
+- RF-based motion detection
+- WiFi radar sensing
+- indoor activity recognition
+
+Some well-known research systems include:
+
+- WiTrack (MIT)
+- RF-Pose
+- WiSee
+- WiFi CSI sensing systems
 
 ---
 
