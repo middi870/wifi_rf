@@ -1,5 +1,4 @@
-# README.md
-
+# WIFI_RF
 ![Rust](https://img.shields.io/badge/Rust-System%20Engine-orange)
 ![Python](https://img.shields.io/badge/Python-Visualization-blue)
 ![RF Sensing](https://img.shields.io/badge/Domain-RF%20Sensing-green)
@@ -7,15 +6,15 @@
 
 
 ## Video Demonstration
-
+---
 ▶️ [Watch the Demo Video](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
 
 ## System Architecture
-
+---
 ![Architecture](docs/architecture_wifi.png)
 
 ## Screenshots
-
+---
 <p align="center">
   <b>Motion Monitor</b><br>
   <img src="docs/1.png" width="300">
@@ -26,7 +25,7 @@
   <img src="docs/3.png" width="300">
   <img src="docs/4.png" width="300">
 </p>
-
+---
 
 # WiFi RF Motion Sensing (Rust + Python)
 
@@ -53,7 +52,7 @@ Current capabilities:
 
 Project is currently in **active research / development stage**.
 
-# Example Output
+## Example Output
 
 Example terminal output from the RF sensing engine:
 
@@ -67,7 +66,7 @@ Higher motion values correspond to **larger disturbances in the WiFi signal**, t
 
 ---
 
-# Key Idea
+## Key Idea
 
 WiFi signals interact with the environment through **multipath propagation**.
 
@@ -81,7 +80,7 @@ This project builds a **signal processing pipeline** to analyze those changes.
 
 ---
 
-# System Architecture
+## System Architecture
 
 The RF sensing pipeline is built as a modular processing engine.
 
@@ -112,7 +111,7 @@ Rust handles **performance-critical signal processing**, while Python provides t
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 .
@@ -154,7 +153,7 @@ Rust handles **performance-critical signal processing**, while Python provides t
 
 ---
 
-# Proof of Concept (POC)
+## Proof of Concept (POC)
 
 ## POC1
 
@@ -195,7 +194,7 @@ RSSI → Rust Engine → Filters → FFT → Feature Extraction → Python
 
 ---
 
-# Installation
+## Installation
 
 ## 1. Clone Repository
 
@@ -240,7 +239,7 @@ https://rustup.rs
 
 ---
 
-# Build Rust Engine
+## Build Rust Engine
 
 Inside the POC directory:
 
@@ -253,7 +252,7 @@ This compiles the Rust engine and exposes it as a Python module.
 
 ---
 
-# Run Example
+## Run Example
 
 ```bash
 cd poc2/python_int
@@ -272,7 +271,7 @@ Values change depending on movement near the WiFi source.
 
 ---
 
-# Hardware Used
+## Hardware Used
 
 * Laptop WiFi adapter (Realtek RTL8723DE)
 * Phone hotspot used as WiFi access point
@@ -281,7 +280,7 @@ No external sensors are required.
 
 ---
 
-# Learning Process
+## Learning Process
 
 This project was built as an exploration of **RF sensing and signal processing**.
 
@@ -296,7 +295,7 @@ The focus of the project was understanding:
 
 ---
 
-# Future Work
+## Future Work
 
 Possible improvements include:
 
@@ -309,7 +308,7 @@ Possible improvements include:
 
 ---
 
-# Why This Project Matters
+## Why This Project Matters
 
 WiFi signals already exist everywhere.
 If we can analyze them properly, they can act as **passive sensors for the environment**.
@@ -323,7 +322,7 @@ This concept is used in research areas such as:
 
 ---
 
-# Disclaimer
+## Disclaimer
 
 This project is an experimental exploration of **RF sensing using commodity WiFi hardware**.
 
@@ -331,16 +330,6 @@ RSSI-based sensing has limitations and may be noisy depending on hardware and en
 
 ---
 
-# License
+## License
 
 MIT License
-
-```
-# requirements.txt
-
-numpy
-scipy
-matplotlib
-maturin
-plotly
-```
