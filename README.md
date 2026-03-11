@@ -25,8 +25,8 @@
   <img src="docs/3.png" width="300">
   <img src="docs/4.png" width="300">
 </p>
----
 
+---
 # WiFi RF Motion Sensing (Rust + Python)
 
 > Detecting human movement using only WiFi signal fluctuations.
