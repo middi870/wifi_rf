@@ -28,8 +28,6 @@
 </p>
 
 
-
-````markdown
 # WiFi RF Motion Sensing (Rust + Python)
 
 > Detecting human movement using only WiFi signal fluctuations.
@@ -63,7 +61,7 @@ Example terminal output from the RF sensing engine:
 motion 295.131 energy 89260.079 variance 87102.191
 motion 303.738 energy 94028.485 variance 92256.992
 motion 308.743 energy 97143.875 variance 95322.322
-````
+```
 
 Higher motion values correspond to **larger disturbances in the WiFi signal**, typically caused by movement near the transmitter or receiver.
 
