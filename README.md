@@ -19,16 +19,10 @@ By applying signal processing techniques, these disturbances can be detected and
 The core signal processing engine is written in **Rust**, while **Python is used for visualization and experimentation**.
 
 ---
-![Video link](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
----
+## Video Demonstration
 
-# 3️⃣ Add an Architecture Image
+▶️ [Watch the Demo Video](https://www.youtube.com/watch?v=QlMwy8KsRzQ&list=PLCUxG8soIk1b-DyhwEWvL3NwPvuNBiMCT&index=14)
 
-Instead of ASCII only, add a simple PNG diagram.
-
-Example:
-
-```markdown
 ## System Architecture
 
 ![Architecture](docs/architecture_wifi.png)
@@ -50,7 +44,7 @@ Current capabilities:
 - experimental visualization tools
 
 Project is currently in **active research / development stage**.
----
+
 # Example Output
 
 Example terminal output from the RF sensing engine:
