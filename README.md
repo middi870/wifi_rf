@@ -53,11 +53,11 @@ The goal of this repository is to explore how **commodity WiFi hardware can be u
 <b>Motion Monitors</b><br>
   <img src="docs/poc1_motion_monitor1.png" width="300">
   <img src="docs/poc1_motion_monitor2.png" width="300">
-  <img src="docs/poc1_breathing_monitor.png" width="300">
 </p>
 
 <p align="center">
 <b>Breathing Monitors</b><br>
+  <img src="docs/poc1_breathing_monitor.png" width="300">
 </p>
 
 ---
