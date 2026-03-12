@@ -1,14 +1,26 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+mod acquisition;
+mod buffer;
+mod engine;
+mod features;
+mod fft;
+mod filters;
+mod kalman;
+
+use pyo3::prelude::*;
+use pyo3::types::PyModule;
+
+use engine::Engine;
+
+#[pyfunction]
+fn start_engine(interface: String) {
+    let mut engine = Engine::new(&interface, 128);
+
+    engine.run();
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[pymodule]
+fn rf_engine(_py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(start_engine, m)?)?;
+    
+    Ok(())
 }
