@@ -18,9 +18,16 @@ fn start_engine(interface: String) {
     engine.run();
 }
 
+#[pyfunction]
+fn get_rssi(interface: String) -> Option<f64> {
+    acquisition::read_rssi(&interface)
+}
+
 #[pymodule]
 fn rf_engine(_py: Python<'_>, m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(start_engine, m)?)?;
-    
+
+    m.add_function(wrap_pyfunction!(get_rssi, m)?)?;
     Ok(())
 }
+
